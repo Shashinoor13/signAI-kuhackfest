@@ -19,7 +19,7 @@ function App() {
     // https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json
     // const net = await tf.loadGraphModel('https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json')
     // const net = await tf.loadLayersModel('')
-    const net = await tf.loadLayersModel('http://127.0.0.1:8080/model.json')
+    const net = await tf.loadLayersModel('http://127.0.0.1:8081/model.json')
     
     //  Loop and detect hands
     setInterval(() => {

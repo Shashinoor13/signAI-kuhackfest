@@ -6,6 +6,7 @@ import {
 import LandingPage from "./pages/landing-page";
 import ModelPage from "./pages/model-page";
 import LearningPage from "./pages/learning-page";
+import WordPage from "./pages/wordPage";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/model-demo" element = {<ModelPage />} />
             <Route path="/learn" element = {<LearningPage />} />
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+            <Route path="/learn/:id" element = {<WordPage />} />
         </Routes>
         </>
     </BrowserRouter>

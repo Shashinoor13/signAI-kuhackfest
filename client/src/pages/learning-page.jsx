@@ -1,334 +1,166 @@
-import { useState , useEffect} from "react";
+import { Link } from "react-router-dom";
 
 function LearningPage(){
-    const data = [        {
-        "Word": "Apple",
-        "Letter": "A",
-        "Photo": "https://example.com/apple.jpg",
-        "Definition": "A fruit with red or green skin, white flesh, and a core with seeds."
-      },
-      {
-        "Word": "Banana",
-        "Letter": "B",
-        "Photo": "https://example.com/banana.jpg",
-        "Definition": "A long, curved fruit with yellow skin and soft, sweet flesh."
-      },
-      {
-        "Word": "Cat",
-        "Letter": "C",
-        "Photo": "https://example.com/cat.jpg",
-        "Definition": "A small domesticated mammal with fur, sharp claws, and a whiskered face."
-      },
-      {
-        "Word": "Dog",
-        "Letter": "D",
-        "Photo": "https://example.com/dog.jpg",
-        "Definition": "A domesticated canine animal known for its loyalty and companionship."
-      },
-      {
-        "Word": "Elephant",
-        "Letter": "E",
-        "Photo": "https://example.com/elephant.jpg",
-        "Definition": "A large, gray mammal with a trunk, big ears, and tusks."
-      },
-      {
-        "Word": "Fish",
-        "Letter": "F",
-        "Photo": "https://example.com/fish.jpg",
-        "Definition": "An aquatic animal with fins and gills that lives in water."
-      },
-      {
-        "Word": "Giraffe",
-        "Letter": "G",
-        "Photo": "https://example.com/giraffe.jpg",
-        "Definition": "A tall, long-necked animal with spots on its body."
-      },
-      {
-        "Word": "Horse",
-        "Letter": "H",
-        "Photo": "https://example.com/horse.jpg",
-        "Definition": "A large, four-legged animal often used for riding and work."
-      },
-      {
-        "Word": "Ice Cream",
-        "Letter": "I",
-        "Photo": "https://example.com/ice-cream.jpg",
-        "Definition": "A frozen dessert made from dairy products and sweet flavors."
-      },
-      {
-        "Word": "Jellyfish",
-        "Letter": "J",
-        "Photo": "https://example.com/jellyfish.jpg",
-        "Definition": "A gelatinous, transparent sea creature with trailing tentacles."
-      },
-      {
-        "Word": "Kangaroo",
-        "Letter": "K",
-        "Photo": "https://example.com/kangaroo.jpg",
-        "Definition": "A marsupial with a long tail, strong hind legs, and a pouch."
-      },
-      {
-        "Word": "Lion",
-        "Letter": "L",
-        "Photo": "https://example.com/lion.jpg",
-        "Definition": "A large, carnivorous feline known for its mane."
-      },
-      {
-        "Word": "Monkey",
-        "Letter": "M",
-        "Photo": "https://example.com/monkey.jpg",
-        "Definition": "A primate with a tail that often lives in trees."
-      },
-      {
-        "Word": "Nest",
-        "Letter": "N",
-        "Photo": "https://example.com/nest.jpg",
-        "Definition": "A structure built by birds to lay eggs and raise their young."
-      },
-      {
-        "Word": "Octopus",
-        "Letter": "O",
-        "Photo": "https://example.com/octopus.jpg",
-        "Definition": "A marine animal with eight arms and a soft body."
-      },
-      {
-        "Word": "Penguin",
-        "Letter": "P",
-        "Photo": "https://example.com/penguin.jpg",
-        "Definition": "A flightless bird found in cold regions, often with a black and white coloration."
-      },
-      {
-        "Word": "Queen",
-        "Letter": "Q",
-        "Photo": "https://example.com/queen.jpg",
-        "Definition": "A female ruler or leader."
-      },
-      {
-        "Word": "Rabbit",
-        "Letter": "R",
-        "Photo": "https://example.com/rabbit.jpg",
-        "Definition": "A small mammal with long ears and a fluffy tail."
-      },
-      {
-        "Word": "Sun",
-        "Letter": "S",
-        "Photo": "https://example.com/sun.jpg",
-        "Definition": "The star at the center of our solar system that provides light and heat."
-      },
-      {
-        "Word": "Tiger",
-        "Letter": "T",
-        "Photo": "https://example.com/tiger.jpg",
-        "Definition": "A large, striped feline known for its strength and agility."
-      },
-      {
-        "Word": "Umbrella",
-        "Letter": "U",
-        "Photo": "https://example.com/umbrella.jpg",
-        "Definition": "A device used to protect against rain or sun."
-      },
-      {
-        "Word": "Vase",
-        "Letter": "V",
-        "Photo": "https://example.com/vase.jpg",
-        "Definition": "A decorative container often used to hold flowers."
-      },
-      {
-        "Word": "Whale",
-        "Letter": "W",
-        "Photo": "https://example.com/whale.jpg",
-        "Definition": "A large marine mammal that lives in the oceans."
-      },
-      {
-        "Word": "Xylophone",
-        "Letter": "X",
-        "Photo": "https://example.com/xylophone.jpg",
-        "Definition": "A musical instrument with wooden bars that are struck with mallets."
-      },
-      {
-        "Word": "Yak",
-        "Letter": "Y",
-        "Photo": "https://example.com/yak.jpg",
-        "Definition": "A large, hairy mammal found in mountainous regions."
-      },
-      {
-        "Word": "Zebra",
-        "Letter": "Z",
-        "Photo": "https://example.com/zebra.jpg",
-        "Definition": "A black and white striped mammal found in Africa."
-      },
+    const data = [
       {
         "Word": "A",
-        "Letter": "🤟",
-        "Photo": "https://example.com/asl-a.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/a1.jpg",
         "Definition": "ASL sign for the letter 'A'."
       },
       {
         "Word": "B",
-        "Letter": "🅱️",
-        "Photo": "https://example.com/asl-b.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/b1.jpg",
         "Definition": "ASL sign for the letter 'B'."
       },
       {
         "Word": "C",
-        "Letter": "🗨️",
-        "Photo": "https://example.com/asl-c.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/c1.jpg",
         "Definition": "ASL sign for the letter 'C'."
       },
-      {
+        {
         "Word": "D",
-        "Letter": "🤞",
-        "Photo": "https://example.com/asl-d.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/d1.jpg",
         "Definition": "ASL sign for the letter 'D'."
       },
-      {
+        {
         "Word": "E",
-        "Letter": "✌️",
-        "Photo": "https://example.com/asl-e.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/e1.jpg",
         "Definition": "ASL sign for the letter 'E'."
       },
-      {
+        {
         "Word": "F",
-        "Letter": "🖖",
-        "Photo": "https://example.com/asl-f.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/f1.jpg",
         "Definition": "ASL sign for the letter 'F'."
       },
-      {
+        {
         "Word": "G",
-        "Letter": "🤙",
-        "Photo": "https://example.com/asl-g.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/g1.jpg",
         "Definition": "ASL sign for the letter 'G'."
       },
-      {
+        {
         "Word": "H",
-        "Letter": "👐",
-        "Photo": "https://example.com/asl-h.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/h1.jpg",
         "Definition": "ASL sign for the letter 'H'."
       },
-      {
+        {
         "Word": "I",
-        "Letter": "🤘",
-        "Photo": "https://example.com/asl-i.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/i1.jpg",
         "Definition": "ASL sign for the letter 'I'."
       },
-      {
+        {
         "Word": "J",
-        "Letter": "🖐️",
-        "Photo": "https://example.com/asl-j.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/j1.jpg",
         "Definition": "ASL sign for the letter 'J'."
       },
-      {
+        {
         "Word": "K",
-        "Letter": "🤟",
-        "Photo": "https://example.com/asl-k.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/k1.jpg",
         "Definition": "ASL sign for the letter 'K'."
       },
-      {
+        {
         "Word": "L",
-        "Letter": "🤞",
-        "Photo": "https://example.com/asl-l.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/l1.jpg",
         "Definition": "ASL sign for the letter 'L'."
-      },
-      {
-        "Word": "M",
-        "Letter": "👐",
-        "Photo": "https://example.com/asl-m.jpg",
+        },
+        {
+                    "Word": "M",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/m1.jpg",
         "Definition": "ASL sign for the letter 'M'."
-      },
-      {
+        },
+        {
         "Word": "N",
-        "Letter": "🤘",
-        "Photo": "https://example.com/asl-n.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/n1.jpg",
         "Definition": "ASL sign for the letter 'N'."
-      },
-      {
+        },
+        {
         "Word": "O",
-        "Letter": "🖐️",
-        "Photo": "https://example.com/asl-o.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/o1.jpg",
         "Definition": "ASL sign for the letter 'O'."
-      },
-      {
+        },
+        {
         "Word": "P",
-        "Letter": "🤟",
-        "Photo": "https://example.com/asl-p.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/p1.jpg",
         "Definition": "ASL sign for the letter 'P'."
-      },
-      {
+        },
+        {
         "Word": "Q",
-        "Letter": "🤞",
-        "Photo": "https://example.com/asl-q.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/q1.jpg",
         "Definition": "ASL sign for the letter 'Q'."
-      },
-      {
+        },
+        {
         "Word": "R",
-        "Letter": "🤙",
-        "Photo": "https://example.com/asl-r.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/r1.jpg",
         "Definition": "ASL sign for the letter 'R'."
-      },
-      {
+        },
+        {
         "Word": "S",
-        "Letter": "👐",
-        "Photo": "https://example.com/asl-s.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/s1.jpg",
         "Definition": "ASL sign for the letter 'S'."
-      },
-      {
+        },
+        {
         "Word": "T",
-        "Letter": "🤘",
-        "Photo": "https://example.com/asl-t.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/t1.jpg",
         "Definition": "ASL sign for the letter 'T'."
-      },
-      {
+        },
+        {
         "Word": "U",
-        "Letter": "🖖",
-        "Photo": "https://example.com/asl-u.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/u1.jpg",
         "Definition": "ASL sign for the letter 'U'."
-      },
-      {
+        },
+        {
         "Word": "V",
-        "Letter": "🤙",
-        "Photo": "https://example.com/asl-v.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/v1.jpg",
         "Definition": "ASL sign for the letter 'V'."
-      },
-      {
+        },
+        {
         "Word": "W",
-        "Letter": "🤞",
-        "Photo": "https://example.com/asl-w.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/w1.jpg",
         "Definition": "ASL sign for the letter 'W'."
-      },
-      {
+        },
+        {
         "Word": "X",
-        "Letter": "🤙",
-        "Photo": "https://example.com/asl-x.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/x1.jpg",
         "Definition": "ASL sign for the letter 'X'."
-      },
-      {
+        },
+        {
         "Word": "Y",
-        "Letter": "🤟",
-        "Photo": "https://example.com/asl-y.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/y1.jpg",
         "Definition": "ASL sign for the letter 'Y'."
-      },
-      {
+        },
+        {
         "Word": "Z",
-        "Letter": "👐",
-        "Photo": "https://example.com/asl-z.jpg",
+        "Photo": "https://www.signingsavvy.com/images/words/alphabet/2/z1.jpg",
         "Definition": "ASL sign for the letter 'Z'."
-      }]
+        }
+        ]
     return(
         <div>
-            <h1>Learning Page</h1>
+            <h1><b>Alphabets</b></h1>
             <div className="container">
-                <div className="row">
+                <div className="flex flex-wrap align-center item-center">
                     {data.map((item) => (
-                        <div className="col-4" key={item.Word}>
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title">{item.Word}</h5>
-                                    <h6 className="card-subtitle mb-2 text-muted">{item.Letter}</h6>
-                                    <img src={item.Photo} alt={item.Word} />
-                                    <p className="card-text">{item.Definition}</p>
-                                </div>
-                            </div>
+                        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-5" key={item}>
+                        <a >
+                            <img className="rounded-t-lg" src={item.Photo} alt="" />
+                        </a>
+                        <div className="p-5">
+                            <a>
+                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.Word}</h5>
+                            </a>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"><i><b>meaning</b></i> : {item.Definition}</p>
+                            {/* <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Learn
+                                 
+                            </a> */}
+                            <Link to={`/learn/${item.Word}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                              Learn
+                              <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                              </Link>
                         </div>
+                    </div>
+
                     ))}
                 </div>
             </div>

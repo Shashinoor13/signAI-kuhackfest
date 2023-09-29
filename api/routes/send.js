@@ -2,9 +2,6 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs');
 
-require('@tensorflow/tfjs-backend-cpu');
-require('@tensorflow/tfjs-backend-webgl');
-const cocoSsd = require('@tensorflow-models/coco-ssd');
 
 router.get('/', async(req, res) => {
     const code = `
@@ -21,18 +18,19 @@ router.get('/', async(req, res) => {
 });
 
 router.get('/:id', async(req, res) => {
-    image1= 'https://i1.sndcdn.com/avatars-000508491087-32hktm-t500x500.jpg'
-    image2= 'https://i.seadn.io/gae/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc?auto=format&w=1000'
-    image3 = 'https://i.pinimg.com/736x/27/8d/ff/278dffd4f7edcbe32bec058133a5c418.jpg'
+
+    image1= 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/a.gif'
+    image2= 'https://i.pinimg.com/originals/db/8e/2f/db8e2f51fc24d10b7c296e8c46112b9a.png'
+    image3 = 'https://previews.123rf.com/images/ovsianka/ovsianka1912/ovsianka191200013/134573037-finger-spelling-letter-c-in-american-sign-language-on-white-background-asl-concept.jpg'
     correct_answer = image3
-    question = 'Which image has the rock'
+    question = 'Which is the letter C'
     
     if(req.params.id == 2){
         image1= 'https://i.ytimg.com/vi/Qw2LUsS-Ujo/maxresdefault.jpg'
         image2= 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fHww&w=1000&q=80'
         image3 = 'https://i.redd.it/jeuusd992wd41.jpg'
         correct_answer = image2
-        question = 'Which image has the shaswat'
+        question = 'Which image is shaswat'
     }
 
     if(req.params.id == 3){
