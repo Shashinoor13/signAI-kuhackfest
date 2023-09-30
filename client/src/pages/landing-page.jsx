@@ -1,5 +1,7 @@
 import FeatureBlock from "../components/Feature-block";
 import Header from "../components/landing-page";
+
+
 function LandingPage(){
   console.log("Called Landing Page");
     return(
@@ -14,15 +16,21 @@ function LandingPage(){
     <div className="flex flex-wrap justify-center items-center md:space-x-5">
       <FeatureBlock 
         title="Learn Sign Language"
-        icon="fas fa-book"
+        svg= "Learnsvg"
         description="Learn Sign Language with our interactive videos"
         href="/learn"
       />
       <FeatureBlock 
         title="Detect Sign Language"
-        icon="fas fa-language"
+        svg= 'Detectsvg'
         description="Translate Sign Language to Text"
         href="/model-demo"
+      />
+      <FeatureBlock 
+        title="Search the Sign Language"
+        svg= "Searchsvg"
+        description="Quickly Lookup a sing for a word"
+        href="/search-sign"
       />
     </div>
     </>

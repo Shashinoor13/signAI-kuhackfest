@@ -19,7 +19,7 @@ function WordPage() {
     }, [id])
     
     const renderedData = list.map(item => (
-        <div key={item} className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xxl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-12">
+        <div key={item} className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xxl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-12 mx-10">
             <iframe
             width={800}
             height={600}
