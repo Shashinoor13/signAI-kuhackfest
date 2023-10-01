@@ -37,7 +37,7 @@ function SearchPage(){
     }
     return (
         <>
-<form className="flex items-center">
+<form className="flex items-center my-5 mx-10">
     {/* <h1>{result.message}</h1> */}
     <label htmlFor="voice-search" className="sr-only">Search</label>
     <div className="relative w-full">
@@ -62,10 +62,10 @@ function SearchPage(){
 <div className="result">
     {
         result.map((item) => (
-            <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xxl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-12" key={item.id}>
+            <div className="flex flex-col items-center bg-gray-900 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xxl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-12 mx-5" key={item.id}>
             
             <iframe
-            width={800}
+            width={770}
             height={600}
                 src={`https://www.youtube.com/embed/${item.id}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

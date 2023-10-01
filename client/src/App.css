@@ -1,42 +1,154 @@
-#root {
-  /* max-width: 1280px; */
+.parent .custom-color-background{
+  background-color: rgba(36, 39, 44, 1);
+}
+.custom-margin-bottom {
+  margin-bottom: 40px; /* Adjust the value as needed to control the spacing */
+}
+.custom-margin-top {
+  margin-top: 40px; /* Adjust the value as needed to control the spacing */
+}
+.custom-margin-right {
+  margin-right: 40px; /* Adjust the value as needed to control the spacing */
+}
+.custom-margin-left {
+  margin-left: 40px; /* Adjust the value as needed to control the spacing */
+}
+.custom-text-center{
+  text-align: center;
+}
+.custom-justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Optionally, to center vertically as well */
+}
+.content-wrapper {
+  text-align: center;
+}
+.button-wrapper {
+  margin: 20px; 
+}
+.con{
+  display: flex;
+  justify-content: center;
+}
+.con .con1{
+  margin-right: 40px;
+}
+.circular-box {
+  width: 120px;
+  height: 120px;
+  background-color: #e0e0e0; /* Background color of the circular box */
+  border-radius: 50%; /* Makes the box circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.disableEvent{
+  pointer-events: none;
+  opacity: 0.4;
+}
+.match-container {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center; /* Align vertically in the center if needed */
+}
+.match-item {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.circle-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  padding: 0rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.img-box-wrapper {
+  margin: 30px; /* Add spacing between the ImgBox components */
+}
+
+.heading-container {
+  background-color: rgba(36, 39, 44, 1);
+  padding: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Style for the heading text */
+.fancy-heading {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.custom-page-background{
+display: flex;
+width: 90rem;
+padding: 5.0625rem 13.1875rem 15.1875rem 13.1875rem;
+flex-direction: column;
+align-items: center;
+
+background: linear-gradient(118deg, rgba(131, 72, 255, 0.20) 0%, rgba(255, 255, 255, 0.17) 101.57%), #FFF;
+}
+.new-container{
+  border-radius: 0.8125rem;
+border: 6px solid #FFF;
+background: linear-gradient(127deg, rgba(252, 238, 238, 0.80) 7.5%, rgba(255, 255, 255, 0.70) 15.7%, rgba(255, 255, 255, 0.51) 54.93%, rgba(252, 238, 238, 0.80) 71.52%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(2px);
+margin: 40px;
+}
+.paired {
+  background-color: green;
+}
+
+
+.not-paired {
+  background-color: red;
+}
+.custom-page-background-match{
+  display: flex;
+  width: 90rem;
+  padding: 5.0625rem 13.1875rem 15.1875rem 13.1875rem;
+
+  align-items: center;
+  
+  background: linear-gradient(118deg, rgba(131, 72, 255, 0.20) 0%, rgba(255, 255, 255, 0.17) 101.57%), #FFF;
   }
-  to {
-    transform: rotate(360deg);
-  }
+ .new-match-container{
+  display: flex;
+  border-radius: 0.8125rem;
+border: 6px solid #FFF;
+background: linear-gradient(127deg, rgba(252, 238, 238, 0.80) 7.5%, rgba(255, 255, 255, 0.70) 15.7%, rgba(255, 255, 255, 0.51) 54.93%, rgba(252, 238, 238, 0.80) 71.52%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(2px);
+width: 63.625rem;
+height: 43.rem;
+ }
+ .large-custom-margin-bottom {
+  margin-bottom: 100px; /* Adjust the value as needed to control the spacing */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.large-custom-margin-top {
+  margin-top: 100px; /* Adjust the value as needed to control the spacing */
 }
-
-.card {
-  padding: 2em;
+.large-custom-margin-right {
+  margin-right: 15rem; /* Adjust the value as needed to control the spacing */
 }
-
-.read-the-docs {
-  color: #888;
+.large-custom-margin-left {
+  margin-left: 10rem; /* Adjust the value as needed to control the spacing */
+}
+.border-curve{
+  border-radius: 0.8125rem;
 }

@@ -11,7 +11,9 @@ function NavBar(){
         <header className="bg-gray-900  backdrop-blur-lg  drop-shadow-lg">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-        <a href="/" className="text-white"> Home</a>
+        <a href="/" className="text-white mx-2"> Home</a>
+        <a href="/quiz" className="text-white mx-2"> Quiz</a>
+        <a href="/match" className="text-white mx-2"> Match The Following</a>
       {/* <Link to={`/`} className="mr-5 hover:text-white text-gray-500">Home</Link> */}
     </nav>
     <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
@@ -45,10 +47,9 @@ function NavBar(){
       }
       {isAuthenticated ? <span className="ml-3 text-xl">Hi, {user.name}</span> : <span className="ml-3 text-xl">Sign AI</span> }
     </a>
+      {/* <Link to={`/learn`} className="mr-5 hover:text-white text-gray-500">Learn</Link> */}
     <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-        {
-            isAuthenticated ? <><LogoutButton/></> : <LoginButton/>
-        }
+            {isAuthenticated ? <><LogoutButton/></> : <LoginButton/>}
     </div>
   </div>
 </header>

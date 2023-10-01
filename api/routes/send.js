@@ -26,11 +26,11 @@ router.get('/:id', async(req, res) => {
     question = 'Which is the letter C'
     
     if(req.params.id == 2){
-        image1= 'https://i.ytimg.com/vi/Qw2LUsS-Ujo/maxresdefault.jpg'
-        image2= 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fHww&w=1000&q=80'
-        image3 = 'https://i.redd.it/jeuusd992wd41.jpg'
+        image1= 'https://www.dummies.com/wp-content/uploads/196945.image1.jpg'
+        image2= 'https://i.ytimg.com/vi/vnGUMYxKwXs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCFyMTrdAXeonxFm3_6CkE6LNq3WA'
+        image3 = 'https://i.ytimg.com/vi/56QIi_mrzvo/maxresdefault.jpg'
         correct_answer = image2
-        question = 'Which image is shaswat'
+        question = 'Which image shows Happy in ASL'
     }
 
     if(req.params.id == 3){

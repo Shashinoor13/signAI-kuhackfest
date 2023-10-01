@@ -16,19 +16,19 @@ function LandingPage(){
     <div className="flex flex-wrap justify-center items-center md:space-x-5">
       <FeatureBlock 
         title="Learn Sign Language"
-        svg= "Learnsvg"
+        icon= "Learnsvg"
         description="Learn Sign Language with our interactive videos"
         href="/learn"
       />
       <FeatureBlock 
         title="Detect Sign Language"
-        svg= 'Detectsvg'
+        icon= 'Detectsvg'
         description="Translate Sign Language to Text"
-        href="/model-demo"
+        href="/index2.html"
       />
       <FeatureBlock 
         title="Search the Sign Language"
-        svg= "Searchsvg"
+        icon= "Searchsvg"
         description="Quickly Lookup a sing for a word"
         href="/search-sign"
       />
