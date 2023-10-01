@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 15
+names: ['Cat', 'Cry', 'I Love You', 'No', 'Please', 'Thank You', 'Washroom', 'When', 'Wrong', 'Yes', 'dont', 'father', 'forget', 'hello', 'help']
+
+roboflow:
+  workspace: kathmandu-university-mppfb
+  project: signai
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kathmandu-university-mppfb/signai/dataset/5
